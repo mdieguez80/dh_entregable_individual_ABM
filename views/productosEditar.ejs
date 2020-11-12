@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto</title>
+</head>
+<body>
+    <h1>Editar productos</h1>
+    <!-- action: le indico la ruta / method: le indico que los datos viajen encriptados, por detras de la URL con el metodo POST -->
+    <form action="/productos/edit/<%= productoFound.id %>" method="POST">
+        <input type="text" name="id" value="<%= productoFound.id %>" readonly placeholder="Colocar ID del producto">
+        <br>
+        <input type="text" name="nombre" value="<%= productoFound.nombre %>" placeholder="Nombre del producto">
+        <br>
+        <input type="text" name="precio" value="<%= productoFound.precio %>" placeholder="Colocar Precio">
+        <br>
+        <input type="text" name="descripcion" value="<%= productoFound.descripcion %>" placeholder="Colocar la descripcion del producto">
+        <br>
+        <input type="text" name="marca" value="<%= productoFound.marca %>" placeholder="Marca del producto">
+        <br>
+        <input type="text" name="stock" value="<%= productoFound.stock %>" placeholder="Stock disponible">
+        <br>
+        <button type="submit">EDITAR</button>
+    </form>
+</body>
+</html>
